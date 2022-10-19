@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            fx:controller="net.veldor.personal_server.controller.MainController">
+
+    <top>
+        <MenuBar>
+            <Menu mnemonicParsing="false" text="Заключения">
+                <MenuItem mnemonicParsing="false" text="Выбрать транзитную папку заключений" onAction="#selectConclusionDir"/>
+                <MenuItem mnemonicParsing="false" text="Выбрать конечную папку для заключений" onAction="#selectConclusionDestinationDir"/>
+                <MenuItem mnemonicParsing="false" text="Выбрать транзитную папку снимков" onAction="#selectDicomDir"/>
+                <MenuItem mnemonicParsing="false" text="Выбрать конечную папку для снимков" onAction="#selectDicomDestinationDir"/>
+                <MenuItem mnemonicParsing="false" text="Выбрать папку с дополнительными файлами DICOM" onAction="#selectDicomAdditionsDir"/>
+                <MenuItem mnemonicParsing="false" text="Выбрать папку с архивом заключений" onAction="#selectConclusionArchiveDir"/>
+                <MenuItem mnemonicParsing="false" text="Обработать заключения"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="20.0">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+
+            <Label fx:id="mainState"/>
+            <Label fx:id="errorState" textFill="crimson"/>
+        </VBox>
+    </center>
+    <right>
+        <VBox alignment="CENTER" spacing="20.0">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+
+            <Label fx:id="conclusionDirState"/>
+            <Label fx:id="webSocketState"/>
+        </VBox>
+    </right>
+</BorderPane>

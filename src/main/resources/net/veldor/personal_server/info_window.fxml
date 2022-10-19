@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" fillWidth="false" spacing="10.0"  xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="net.veldor.personal_server.controller.InfoController">
+    <Label fx:id="infoContainer" />
+   <Button fx:id="confirmBtn" mnemonicParsing="false" onAction="#closeMe" text="Ок" onKeyPressed="#keyPressed" />
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+</VBox>
